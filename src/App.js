@@ -15,8 +15,8 @@ const Col = styled.div`
   float:left;
   min-height: 5px;
   width: calc(100% * (${props => props.col ? props.col : 1} / 12));
-  padding: ${props => props.nogutter ? 0 : 0.5}rem;
-
+  padding-left: ${props => props.nogutter ? 0 : 0.5}rem;
+  padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
 `
 
 const Row = styled.div`
@@ -37,18 +37,21 @@ const Row = styled.div`
 const PerfHeader = styled(Row)`
   background-color: #253040;
   color: white;
+  padding: 0.5rem;
   border-radius: 5px 5px 0 0;
 `
 
 const PerfBody = styled(Row)`
   min-height: 300px;
   background-color: white;
+  padding: 0.5rem;
 `
 
 const PerfFooter = styled(Row)`
   background-color: #253040;
   border-radius: 0 0 5px 5px;
 `
+
 const PerfRoot = styled(Col)`
 `
 
@@ -61,7 +64,6 @@ const PerformanceComponent = ({title, content}) => {
       </PerfHeader>
       <PerfBody>
         <Col col={1}>
-          {content}
         </Col>
         <Col col={1} />
         <Col col={1} />
@@ -86,31 +88,36 @@ const PerformanceComponent = ({title, content}) => {
 const HeaderRoot = styled(Row)`
   background-color: #9DC02E;
   padding: 1rem;
-`
-
-const HeaderMenu = styled(Row)`
-  justify-content: space-between;
   align-items: flex-end;
 `
 
+const HeaderMenu = styled(Row)`
+  justify-content: flex-end;
+  align-items: baseline;
+`
+
 const MenuItem = styled(Col)`
-  justify-content:flex-end;
+  width: max-content;
+  cursor: pointer;
+  color: white;
+  padding-bottom: 0px;
 `
 
 
 const HeaderComponent = () => {
   return (
     <HeaderRoot>
-      <Col col={3} style={{color: "white"}}><h2>Logo</h2></Col>
-      <Col col={8} style={{color: "white"}}>
-        <Row>
-          <MenuItem col={4} style={{color: "white"}}><p>LEISTUNGSÜBERSICHT</p></MenuItem>
-          <Col col={3} style={{color: "white"}}><p>WERBEKAMPAGNEN</p></Col>
-          <Col col={2} style={{color: "white"}}><p>ANFRAGEN</p></Col>
-          <Col col={3} style={{color: "white"}}><p>BADRECHNER</p></Col>
-        </Row>
+      <Col col={1} style={{color: "white"}}><h2>Logo</h2></Col>
+      <Col col={10}>
+        <HeaderMenu>
+          <MenuItem col={4} ><p>LEISTUNGSÜBERSICHT</p></MenuItem>
+          <MenuItem col={3} ><p>WERBEKAMPAGNEN</p></MenuItem>
+          <MenuItem col={3} ><p>BADRECHNER</p></MenuItem>
+          <MenuItem col={3} ><p>BADRECHNER</p></MenuItem>
+        </HeaderMenu>
       </Col>
-      <Col col={3} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px"}}>
+      <Col col={1} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px"}}>
+        <h2>Profile</h2>
       </Col>
     </HeaderRoot>
   )
@@ -128,7 +135,7 @@ class App extends Component {
             </Row>
             <Row>
               <Col col={12}>
-                <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0"}}>
+                <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0", padding: "1rem"}}>
                   <Col col={1}><p>Sanitär</p></Col>
                   <Col col={11}><p>26.04.2013 - 19.10.2017</p></Col>
                 </Row>
