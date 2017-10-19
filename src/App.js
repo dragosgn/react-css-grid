@@ -114,24 +114,46 @@ const HeaderRoot = styled(Row)`
   padding: 1rem;
   align-items: flex-end;
   min-height: 3rem;
+  @media all and (max-width:650px){
+    padding: 1rem 0 1rem 0;
+  }
 `
 
 const HeaderMenu = styled(Row)`
   justify-content: flex-end;
   align-items: baseline;
+  @media all and (max-width:650px){
+
+  }
 `
 
 const MenuItem = styled(Col)`
   cursor: pointer;
   color: white;
   padding-bottom: 0px;
+  @media all and (max-width:650px){
+    color: grey;
+    background-color: white;
+  }
+`
+
+const Logo = styled(Col)`
+  @media all and (max-width:650px){
+    display: none;
+  }
+`
+
+const Profile = styled(Col)`
+  @media all and (max-width:650px){
+    display: none;
+  }
 `
 
 
 const HeaderComponent = () => {
   return (
     <HeaderRoot>
-      <Col col={1} colsm={12} colmd={12} style={{color: "white"}}><h2>Logo</h2></Col>
+      <Logo col={1} colsm={12} colmd={12} style={{color: "white"}}><h2>Logo</h2></Logo>
       <Col col={10} colsm={12} colmd={12} nogutter>
         <HeaderMenu>
           <MenuItem col={3} colsm={12} colmd={12}><p>LEISTUNGSÜBERSICHT</p></MenuItem>
@@ -140,9 +162,9 @@ const HeaderComponent = () => {
           <MenuItem col={3} colsm={12} colmd={12}><p>BADRECHNER</p></MenuItem>
         </HeaderMenu>
       </Col>
-      <Col col={1} colsm={12} colmd={12} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px", paddingTop:"1rem", paddingBottom:"1rem"}}>
+      <Profile col={1} colsm={12} colmd={12} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px", paddingTop:"1rem", paddingBottom:"1rem"}}>
         <h2>Profile</h2>
-      </Col>
+      </Profile>
     </HeaderRoot>
   )
 }
@@ -168,8 +190,6 @@ class App extends Component {
                     <Row>
                       <Col><h1>SERVICECENTER</h1></Col>
                     </Row>
-                    <Row />
-                    <Row />
                     <Row />
                     <Row />
                     <Row>
