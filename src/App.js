@@ -20,9 +20,11 @@ const Col = styled.div`
   };
   @media all and (max-width:650px){
     width: calc(100% * (${props => props.colsm ? props.colsm : 12} / 12));
+    padding-left: ${props => props.nogutter ? 0 : 0.5}rem;
+    padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   };
-  padding-left: ${props => props.nogutter ? 0 : 0.5}rem;
-  padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  padding-left: ${props => props.nogutter ? 0 : 1}rem;
+  padding-right: ${props => props.nogutter ? 0 : 1}rem;
 `
 
 const Row = styled.div`
