@@ -8,60 +8,90 @@ const Container = styled.div`
   margin-left: auto;
 `
 
-// const Grid = styled.div`
-//   > div {
-//     width: calc(100% / ${props => props.col});
-//     margin-left: 1rem;
-//     :first-child {
-//       margin-left: 0px;
-//     }
-//   }
-//   display: flex;
-//   flex-direction: row;
-// `
-
 const Grid = styled.div`
   width: 100%;
+
 `
 
 const Col = styled.div`
   display: flex;
   flex-direction: column;
   background-color: red;
+  width: calc(100% * (${props => props.col} / 12));
+  margin: 0 1rem 0 1rem;
 `
 
 const Row = styled.div`
   display: flex;
   flex-direction: row;
   background-color: yellow;
+  margin: 0.5rem 0 0.5rem 0;
 `
+
+
+
+const PerfHeader = styled(Row)`
+
+`
+
+const PerfBody = styled(Row)`
+  min-height: 200px;
+`
+
+const PerfFooter = styled(Row)``
+
+const PerformanceComponent = ({title, content}) => {
+  return(
+    <Col col={12}>
+      <PerfHeader>
+        <Col col={4}>{title}</Col>
+        <Col col={4}></Col>
+        <Col col={4}>Date</Col>
+      </PerfHeader>
+      <PerfBody>
+        <Col col={12}>
+          {content}
+        </Col>
+      </PerfBody>
+      <PerfFooter></PerfFooter>
+    </Col>
+  )
+}
 
 class App extends Component {
   render() {
     return (
       <Container>
-        <Grid col={3}>
-          <Col>
-            <Row><h1>Row</h1></Row>
-            <Row>Row</Row>
-            <Row>Row</Row>
+        <Row>
+          <Col col={12}>
+            <Row>
+              <h1>LEISTUNGSÜBERSICHT</h1>
+            </Row>
+            <Row>
+              <Col col={12}>
+                <Row>
+                  <Col col={1}><p>Sanitär</p></Col>
+                  <Col col={11}><p>Date</p></Col>
+                </Row>
+                <Row>
+                  <Col col={12}>
+                    <Row>
+                      <h1>SERVICECENTER</h1>
+                    </Row>
+                    <Row>
+                      <Col col={6}>
+
+                      </Col>
+                      <Col col={6}>
+
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
           </Col>
-          <Col>
-            <Row><h1>Row</h1></Row>
-            <Row>Row</Row>
-            <Row>Row</Row>
-          </Col>
-          <Col>
-            <Row><h1>Row</h1></Row>
-            <Row>Row</Row>
-            <Row>Row</Row>
-          </Col>
-        </Grid>
-        <Col>
-          <Row><h1>Row</h1></Row>
-          <Row>Row</Row>
-          <Row>Row</Row>
-        </Col>
+        </Row>
       </Container>
     )
   }
