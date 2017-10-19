@@ -13,8 +13,14 @@ const Col = styled.div`
   display: flex;
   flex-direction: column;
   float:left;
-  min-height: 5px;
-  width: calc(100% * (${props => props.col ? props.col : 1} / 12));
+  min-height: 0.5rem;
+  width: calc(100% * (${props => props.col ? props.col : 12} / 12));
+  @media all and (max-width:800px){
+    width: calc(100% * (${props => props.colmd ? props.colmd : 12} / 12));
+  };
+  @media all and (max-width:650px){
+    width: calc(100% * (${props => props.colsm ? props.colsm : 12} / 12));
+  };
   padding-left: ${props => props.nogutter ? 0 : 0.5}rem;
   padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
 `
@@ -22,7 +28,13 @@ const Col = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  min-height: 5px;
+  min-height: 0.5rem;
+  @media all and (max-width:800px){
+    flex-wrap: wrap;
+  };
+  @media all and (max-width:650px){
+    flex-wrap: wrap;
+  };
   /*-- our cleafix hack -- */
   .row:before,
     .row:after {
@@ -31,8 +43,6 @@ const Row = styled.div`
         clear:both;
     }
 `
-
-
 
 const PerfHeader = styled(Row)`
   background-color: #253040;
@@ -50,17 +60,31 @@ const PerfBody = styled(Row)`
 const PerfFooter = styled(Row)`
   background-color: #253040;
   border-radius: 0 0 5px 5px;
+  padding: 0.5rem;
 `
 
-const PerfRoot = styled(Col)`
+const PerfRoot = styled.div`
+  margin-top: 1rem;
+`
+
+const HeaderTitle = styled(Row)`
+
+`
+
+const HeaderDate = styled(Row)`
+  justify-content: flex-end;
 `
 
 const PerformanceComponent = ({title, content}) => {
   return(
-    <PerfRoot col={12}>
+    <PerfRoot>
       <PerfHeader>
-        <Col col={7}>{title}</Col>
-        <Col col={5}>26.04.2013 - 19.10.2017</Col>
+        <Col col={7}>
+          <HeaderTitle>{title}</HeaderTitle>
+        </Col>
+        <Col col={5}>
+          <HeaderDate>26.04.2013 - 19.10.2017</HeaderDate>
+        </Col>
       </PerfHeader>
       <PerfBody>
         <Col col={1}>
@@ -89,6 +113,7 @@ const HeaderRoot = styled(Row)`
   background-color: #9DC02E;
   padding: 1rem;
   align-items: flex-end;
+  min-height: 3rem;
 `
 
 const HeaderMenu = styled(Row)`
@@ -97,7 +122,6 @@ const HeaderMenu = styled(Row)`
 `
 
 const MenuItem = styled(Col)`
-  width: max-content;
   cursor: pointer;
   color: white;
   padding-bottom: 0px;
@@ -107,16 +131,16 @@ const MenuItem = styled(Col)`
 const HeaderComponent = () => {
   return (
     <HeaderRoot>
-      <Col col={1} style={{color: "white"}}><h2>Logo</h2></Col>
-      <Col col={10}>
+      <Col col={1} colsm={12} colmd={12} style={{color: "white"}}><h2>Logo</h2></Col>
+      <Col col={10} colsm={12} colmd={12} nogutter>
         <HeaderMenu>
-          <MenuItem col={4} ><p>LEISTUNGSÜBERSICHT</p></MenuItem>
-          <MenuItem col={3} ><p>WERBEKAMPAGNEN</p></MenuItem>
-          <MenuItem col={3} ><p>BADRECHNER</p></MenuItem>
-          <MenuItem col={3} ><p>BADRECHNER</p></MenuItem>
+          <MenuItem col={3} colsm={12} colmd={12}><p>LEISTUNGSÜBERSICHT</p></MenuItem>
+          <MenuItem col={3} colsm={12} colmd={12}><p>WERBEKAMPAGNEN</p></MenuItem>
+          <MenuItem col={3} colsm={12} colmd={12}><p>BADRECHNER</p></MenuItem>
+          <MenuItem col={3} colsm={12} colmd={12}><p>BADRECHNER</p></MenuItem>
         </HeaderMenu>
       </Col>
-      <Col col={1} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px"}}>
+      <Col col={1} colsm={12} colmd={12} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px", paddingTop:"1rem", paddingBottom:"1rem"}}>
         <h2>Profile</h2>
       </Col>
     </HeaderRoot>
@@ -131,10 +155,10 @@ class App extends Component {
         <Row>
           <Col col={12}>
             <Row>
-              <h1 style={{color: "#253040"}}>LEISTUNGSÜBERSICHT</h1>
+              <h1 style={{color: "#253040", paddingTop:"1rem", paddingBottom:"1rem"}}>LEISTUNGSÜBERSICHT</h1>
             </Row>
             <Row>
-              <Col col={12}>
+              <Col col={12} nogutter>
                 <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0", padding: "1rem"}}>
                   <Col col={1}><p>Sanitär</p></Col>
                   <Col col={11}><p>26.04.2013 - 19.10.2017</p></Col>
@@ -149,16 +173,28 @@ class App extends Component {
                     <Row />
                     <Row />
                     <Row>
-                      <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
-                      <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
+                      <Col col={6} colmd={12}>
+                        <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
+                      </Col>
+                      <Col col={6} colmd={12}>
+                        <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
+                      </Col>
                     </Row>
                     <Row>
-                      <PerformanceComponent title={"Anfragenverteilung nach Status"} content={"Clock"} />
-                      <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
+                      <Col col={6} colmd={12}>
+                        <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
+                      </Col>
+                      <Col col={6} colmd={12}>
+                        <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
+                      </Col>
                     </Row>
                     <Row>
-                      <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
-                      <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
+                      <Col col={6} colmd={12}>
+                        <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
+                      </Col>
+                      <Col col={6}>
+                        <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
+                      </Col>
                     </Row>
                   </Col>
                 </Row>
