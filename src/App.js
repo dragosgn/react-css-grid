@@ -89,7 +89,12 @@ const HeaderRoot = styled(Row)`
 `
 
 const HeaderMenu = styled(Row)`
+  justify-content: space-between;
+  align-items: flex-end;
+`
 
+const MenuItem = styled(Col)`
+  justify-content:flex-end;
 `
 
 
@@ -99,14 +104,13 @@ const HeaderComponent = () => {
       <Col col={3} style={{color: "white"}}><h2>Logo</h2></Col>
       <Col col={8} style={{color: "white"}}>
         <Row>
-          <Col col={4} style={{color: "white"}}><p>LEISTUNGSÜBERSICHT</p></Col>
+          <MenuItem col={4} style={{color: "white"}}><p>LEISTUNGSÜBERSICHT</p></MenuItem>
           <Col col={3} style={{color: "white"}}><p>WERBEKAMPAGNEN</p></Col>
           <Col col={2} style={{color: "white"}}><p>ANFRAGEN</p></Col>
           <Col col={3} style={{color: "white"}}><p>BADRECHNER</p></Col>
         </Row>
       </Col>
       <Col col={3} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px"}}>
-
       </Col>
     </HeaderRoot>
   )
