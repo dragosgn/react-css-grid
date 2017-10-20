@@ -792,7 +792,7 @@ const HeaderComponent = () => {
           <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
         </HeaderMenu>
       </Col>
-      <Profile desktop={2} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px", paddingTop:"1rem", paddingBottom:"1rem"}}>
+      <Profile desktop={2} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px",paddingTop:"1rem", paddingBottom:"1rem"}}>
         <h2>Profile</h2>
       </Profile>
     </HeaderRoot>
