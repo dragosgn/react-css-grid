@@ -432,7 +432,7 @@ const Col = styled.div`
     and (min-device-width: 768px)
     and (max-device-width: 1024px)
     and (-webkit-min-device-pixel-ratio: 1) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Portrait */
@@ -441,7 +441,7 @@ const Col = styled.div`
     and (max-device-width: 1024px)
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 1) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Landscape */
@@ -450,7 +450,7 @@ const Col = styled.div`
     and (max-device-width: 1024px)
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 1) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
@@ -460,7 +460,7 @@ const Col = styled.div`
     and (min-device-width: 768px)
     and (max-device-width: 1024px)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Portrait */
@@ -469,7 +469,7 @@ const Col = styled.div`
     and (max-device-width: 1024px)
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Landscape */
@@ -478,7 +478,7 @@ const Col = styled.div`
     and (max-device-width: 1024px)
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* ----------- iPad Pro 10.5" ----------- */
@@ -488,7 +488,7 @@ const Col = styled.div`
     and (min-device-width: 834px)
     and (max-device-width: 1112px)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Portrait */
@@ -499,7 +499,7 @@ const Col = styled.div`
     and (max-device-width: 834px)
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Landscape */
@@ -510,7 +510,7 @@ const Col = styled.div`
     and (max-device-width: 1112px)
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* ----------- iPad Pro 12.9" ----------- */
@@ -520,7 +520,7 @@ const Col = styled.div`
     and (min-device-width: 1024px)
     and (max-device-width: 1366px)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Portrait */
@@ -531,7 +531,7 @@ const Col = styled.div`
     and (max-device-width: 1024px)
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Landscape */
@@ -542,7 +542,7 @@ const Col = styled.div`
     and (max-device-width: 1366px)
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* ----------- Galaxy Tab 2 ----------- */
@@ -551,21 +551,21 @@ const Col = styled.div`
   @media
     (min-device-width: 800px)
     and (max-device-width: 1280px) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Portrait */
   @media
     (max-device-width: 800px)
     and (orientation: portrait) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Landscape */
   @media
     (max-device-width: 1280px)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* ----------- Galaxy Tab S ----------- */
@@ -575,7 +575,7 @@ const Col = styled.div`
     (min-device-width: 800px)
     and (max-device-width: 1280px)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Portrait */
@@ -583,7 +583,7 @@ const Col = styled.div`
     (max-device-width: 800px)
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Landscape */
@@ -591,7 +591,7 @@ const Col = styled.div`
     (max-device-width: 1280px)
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* ----------- Nexus 7 ----------- */
@@ -602,7 +602,7 @@ const Col = styled.div`
     and (device-height: 906px)
     and (-webkit-min-device-pixel-ratio: 1.331)
     and (-webkit-max-device-pixel-ratio: 1.332) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Portrait */
@@ -612,7 +612,7 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 1.331)
     and (-webkit-max-device-pixel-ratio: 1.332)
     and (orientation: portrait) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Landscape */
@@ -622,7 +622,7 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 1.331)
     and (-webkit-max-device-pixel-ratio: 1.332)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* ----------- Nexus 9 ----------- */
@@ -633,7 +633,7 @@ const Col = styled.div`
     and (device-height: 2048px)
     and (-webkit-min-device-pixel-ratio: 1.331)
     and (-webkit-max-device-pixel-ratio: 1.332) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Portrait */
@@ -643,7 +643,7 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 1.331)
     and (-webkit-max-device-pixel-ratio: 1.332)
     and (orientation: portrait) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Landscape */
@@ -653,7 +653,7 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 1.331)
     and (-webkit-max-device-pixel-ratio: 1.332)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   }
 
   /* Laptops */
@@ -662,6 +662,9 @@ const Col = styled.div`
     and (min-device-width: 1200px)
     and (max-device-width: 1600px)
     and (-webkit-min-device-pixel-ratio: 1) {
+      width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
+      padding-left: ${props => props.nogutter ? 0 : 1}rem;
+      padding-right: ${props => props.nogutter ? 0 : 1}rem;
   }
 
   /* ----------- Retina Screens ----------- */
@@ -670,39 +673,10 @@ const Col = styled.div`
     and (max-device-width: 1600px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (min-resolution: 192dpi) {
+      width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
+      padding-left: ${props => props.nogutter ? 0 : 1}rem;
+      padding-right: ${props => props.nogutter ? 0 : 1}rem;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  @media all and (max-width:800px){
-    width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-  };
-  @media  and (max-width:650px){
-    width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-    padding: ${props => props.nogutter ? 0 : 0.5}rem;
-    padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
-  }
-
-
-
-
 `
 
 const Row = styled.div`
