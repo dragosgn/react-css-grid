@@ -206,7 +206,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 2)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -217,7 +217,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 2)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -229,7 +229,7 @@ const Col = styled.div`
     and (device-width: 320px)
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -240,7 +240,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -251,7 +251,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -263,7 +263,7 @@ const Col = styled.div`
     and (device-width: 360px)
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -274,7 +274,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -285,7 +285,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -298,7 +298,7 @@ const Col = styled.div`
     and (device-width: 360px)
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -309,7 +309,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -320,7 +320,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -332,7 +332,7 @@ const Col = styled.div`
     and (device-width: 360px)
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -343,7 +343,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -354,7 +354,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -366,7 +366,7 @@ const Col = styled.div`
     and (device-width: 360px)
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -377,7 +377,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -388,7 +388,7 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -399,7 +399,7 @@ const Col = styled.div`
   @media screen
     and (device-width: 480px)
     and (device-height: 800px) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -409,7 +409,7 @@ const Col = styled.div`
     and (device-width: 480px)
     and (device-height: 800px)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -419,7 +419,7 @@ const Col = styled.div`
     and (device-width: 480px)
     and (device-height: 800px)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -695,7 +695,7 @@ const Col = styled.div`
     width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   };
   @media  and (max-width:650px){
-    width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+    width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
     padding: ${props => props.nogutter ? 0 : 0.5}rem;
     padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
