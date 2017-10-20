@@ -15,7 +15,7 @@ const Container = styled.div`
 const Col = styled.div`
   float:left;
   min-height: 0.5rem;
-  width: calc(100% * (${props.desktop => props.desktop ? props.desktop : 12} / 12));
+  width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
   padding-left: ${props => props.nogutter ? 0 : 1}rem;
   padding-right: ${props => props.nogutter ? 0 : 1}rem;
 
@@ -273,7 +273,7 @@ const Col = styled.div`
 
 /* Portrait and Landscape */
 @media screen
-  and (device-width: 360px) 
+  and (device-width: 360px)
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 4) {
 
@@ -376,7 +376,7 @@ const PerformanceComponent = ({title, content}) => {
 
 
 const HeaderRoot = styled(Row)`
-  background-desktopor: #9DC02E;
+  background-color: #9DC02E;
   padding: 1rem;
   align-items: flex-end;
   min-height: 3rem;
@@ -393,10 +393,9 @@ const HeaderMenu = styled(Row)`
   }
 `
 
-const MenuItem = styled()`
-
+const MenuItem = styled(Col)`
   cursor: pointer;
-  desktopor: white;
+  color: white;
   padding-bottom: 0px;
   @media all and (max-width:650px){
     desktopor: grey;
@@ -417,20 +416,18 @@ const Profile = styled(desktop)`
   }
 `
 
-
-
 const HeaderComponent = () => {
   return (
     <HeaderRoot>
       <Logo desktop={1} style={{desktopor: "white"}}><h2>Logo</h2></Logo>
-      <desktop desktop={10} mobile={12} nogutter>
+      <Col desktop={10} mobile={12} nogutter>
         <HeaderMenu>
           <MenuItem ><p>LEISTUNGSÜBERSICHT</p></MenuItem>
           <MenuItem desktop={3}><p>WERBEKAMPAGNEN</p></MenuItem>
           <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
           <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
         </HeaderMenu>
-      </desktop>
+      </Col>
       <Profile desktop={1} mobile={12} desktop-md={12} style={{backgrounddesktopor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px", paddingTop:"1rem", paddingBottom:"1rem"}}>
         <h2>Profile</h2>
       </Profile>
@@ -444,52 +441,52 @@ class App extends Component {
       <Container>
         <HeaderComponent />
         <Row>
-          <desktop>
+          <Col>
             <Row>
               <h1 style={{desktopor: "#253040", paddingTop:"1rem", paddingBottom:"1rem"}}>LEISTUNGSÜBERSICHT</h1>
             </Row>
             <Row>
-              <desktop nogutter>
+              <Col nogutter>
                 <Row style={{backgrounddesktopor: "#253040", desktopor: "white", borderRadius: "5px 5px 0 0", padding: "1rem"}}>
-                  <desktop desktop={1}><p>Sanitär</p></desktop>
-                  <desktop desktop={11}><p>26.04.2013 - 19.10.2017</p></desktop>
+                  <Col desktop={1}><p>Sanitär</p></Col>
+                  <Col desktop={11}><p>26.04.2013 - 19.10.2017</p></Col>
                 </Row>
                 <Row>
-                  <desktop desktop={12} style={{backgrounddesktopor: "#D3D3D3"}}>
+                  <Col desktop={12} style={{backgrounddesktopor: "#D3D3D3"}}>
                     <Row>
-                      <desktop><h1>SERVICECENTER</h1></desktop>
+                      <Col><h1>SERVICECENTER</h1></Col>
                     </Row>
                     <Row />
                     <Row />
                     <Row>
-                      <desktop desktop={6} tablet={12} mobile={12}>
+                      <Col desktop={6} tablet={12} mobile={12}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
-                      </desktop>
-                      <desktop desktop={6} desktop-md={12}>
+                      </Col>
+                      <Col desktop={6} desktop-md={12}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
-                      </desktop>
+                      </Col>
                     </Row>
                     <Row>
-                      <desktop desktop={6} desktop-md={12}>
+                      <Col desktop={6} desktop-md={12}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
-                      </desktop>
-                      <desktop desktop={6} desktop-md={12}>
+                      </Col>
+                      <Col desktop={6} desktop-md={12}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
-                      </desktop>
+                      </Col>
                     </Row>
                     <Row>
-                      <desktop desktop={6} desktop-md={12}>
+                      <Col desktop={6} desktop-md={12}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
-                      </desktop>
-                      <desktop desktop={6}>
+                      </Col>
+                      <Col desktop={6}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
-                      </desktop>
+                      </Col>
                     </Row>
-                  </desktop>
+                  </Col>
                 </Row>
-              </desktop>
+              </Col>
             </Row>
-          </desktop>
+          </Col>
         </Row>
       </Container>
     )
