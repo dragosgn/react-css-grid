@@ -359,6 +359,192 @@ const Col = styled.div`
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
+  /* ----------- HTC One ----------- */
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
+
+  /* ----------- Windows Phone ----------- */
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 480px)
+    and (device-height: 800px) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 480px)
+    and (device-height: 800px)
+    and (orientation: portrait) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 480px)
+    and (device-height: 800px)
+    and (orientation: landscape) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
+
+
+  /* Tablets and Ipads */
+  /* ----------- iPad 1, 2, Mini and Air ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+  }
+
+  /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* ----------- iPad Pro 10.5" ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 834px)
+    and (max-device-width: 1112px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Portrait */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen
+    and (min-device-width: 834px)
+    and (max-device-width: 834px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Landscape */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen
+    and (min-device-width: 1112px)
+    and (max-device-width: 1112px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* ----------- iPad Pro 12.9" ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1366px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Portrait */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Landscape */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen
+    and (min-device-width: 1366px)
+    and (max-device-width: 1366px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
 
   @media all and (max-width:800px){
     width: calc(100% * (${props => props.tablet ? props.tablet : 12} / 12));
