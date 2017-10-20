@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 
+
+//  Grid
+
 const Container = styled.div`
   max-width: 1140px;
   width: 100%;
@@ -10,21 +13,300 @@ const Container = styled.div`
 `
 
 const Col = styled.div`
-  display: flex;
-  flex-direction: column;
   float:left;
   min-height: 0.5rem;
-  width: calc(100% * (${props => props.col ? props.col : 12} / 12));
-  @media all and (max-width:800px){
-    width: calc(100% * (${props => props.colmd ? props.colmd : 12} / 12));
-  };
-  @media all and (max-width:650px){
-    width: calc(100% * (${props => props.colsm ? props.colsm : 12} / 12));
-    padding-left: ${props => props.nogutter ? 0 : 0.5}rem;
-    padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
-  };
+  width: calc(100% * (${props.desktop => props.desktop ? props.desktop : 12} / 12));
   padding-left: ${props => props.nogutter ? 0 : 1}rem;
   padding-right: ${props => props.nogutter ? 0 : 1}rem;
+
+  /* Mobile Responsivness */
+
+  /* ----------- iPhone 4 and 4S ----------- */
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+  }
+
+    /* Landscape */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+
+  }
+
+  /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+
+  }
+
+  /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+
+  }
+
+  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+
+  }
+
+  /* ----------- iPhone X ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+
+  }
+  /* ----------- Galaxy S3 ----------- */
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 2) {
+
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+
+  }
+
+  /* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3) {
+
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+
+  }
+
+  /* ----------- Galaxy S6 ----------- */
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 4) {
+
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 4)
+    and (orientation: portrait) {
+
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 4)
+    and (orientation: landscape) {
+  }
+
+
+  /* ----------- Google Pixel ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+
+/* Portrait */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Google Pixel XL ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px) 
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+
+/* Portrait */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 4)
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 4)
+  and (orientation: landscape) {
+
+}
+
+
+  @media all and (max-width:800px){
+    width: calc(100% * (${props => props.tablet ? props.tablet : 12} / 12));
+  };
+  @media  and (max-width:650px){
+    width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+    padding-left: ${props => props.nogutter ? 0 : 0.5}rem;
+    padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
+
 `
 
 const Row = styled.div`
@@ -33,19 +315,13 @@ const Row = styled.div`
   min-height: 0.5rem;
   @media all and (max-width:800px){
     flex-wrap: wrap;
-  };
+  }
   @media all and (max-width:650px){
     flex-wrap: wrap;
-  };
-  /*-- our cleafix hack -- */
-  .row:before,
-    .row:after {
-        content:"";
-        display: table ;
-        clear:both;
-    }
+  }
 `
 
+// Grid
 const PerfHeader = styled(Row)`
   background-color: #253040;
   color: white;
@@ -81,26 +357,14 @@ const PerformanceComponent = ({title, content}) => {
   return(
     <PerfRoot>
       <PerfHeader>
-        <Col col={7}>
+        <Col desktop={7} mobile={2}>
           <HeaderTitle>{title}</HeaderTitle>
-        </Col>
-        <Col col={5}>
+        </desktop>
+        <Col desktop={5}>
           <HeaderDate>26.04.2013 - 19.10.2017</HeaderDate>
-        </Col>
+        </desktop>
       </PerfHeader>
       <PerfBody>
-        <Col col={1}>
-        </Col>
-        <Col col={1} />
-        <Col col={1} />
-        <Col col={1} />
-        <Col col={1} />
-        <Col col={1} />
-        <Col col={1} />
-        <Col col={1} />
-        <Col col={1} />
-        <Col col={1} />
-        <Col col={1} />
       </PerfBody>
       <PerfFooter>
         <Col>
@@ -112,7 +376,7 @@ const PerformanceComponent = ({title, content}) => {
 
 
 const HeaderRoot = styled(Row)`
-  background-color: #9DC02E;
+  background-desktopor: #9DC02E;
   padding: 1rem;
   align-items: flex-end;
   min-height: 3rem;
@@ -129,42 +393,45 @@ const HeaderMenu = styled(Row)`
   }
 `
 
-const MenuItem = styled(Col)`
+const MenuItem = styled()`
+
   cursor: pointer;
-  color: white;
+  desktopor: white;
   padding-bottom: 0px;
   @media all and (max-width:650px){
-    color: grey;
+    desktopor: grey;
     background-color: white;
   }
+
 `
 
-const Logo = styled(Col)`
+const Logo = styled(desktop)`
   @media all and (max-width:650px){
     display: none;
   }
 `
 
-const Profile = styled(Col)`
+const Profile = styled(desktop)`
   @media all and (max-width:650px){
     display: none;
   }
 `
+
 
 
 const HeaderComponent = () => {
   return (
     <HeaderRoot>
-      <Logo col={1} colsm={12} colmd={12} style={{color: "white"}}><h2>Logo</h2></Logo>
-      <Col col={10} colsm={12} colmd={12} nogutter>
+      <Logo desktop={1} style={{desktopor: "white"}}><h2>Logo</h2></Logo>
+      <desktop desktop={10} mobile={12} nogutter>
         <HeaderMenu>
-          <MenuItem col={3} colsm={12} colmd={12}><p>LEISTUNGSÜBERSICHT</p></MenuItem>
-          <MenuItem col={3} colsm={12} colmd={12}><p>WERBEKAMPAGNEN</p></MenuItem>
-          <MenuItem col={3} colsm={12} colmd={12}><p>BADRECHNER</p></MenuItem>
-          <MenuItem col={3} colsm={12} colmd={12}><p>BADRECHNER</p></MenuItem>
+          <MenuItem ><p>LEISTUNGSÜBERSICHT</p></MenuItem>
+          <MenuItem desktop={3}><p>WERBEKAMPAGNEN</p></MenuItem>
+          <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
+          <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
         </HeaderMenu>
-      </Col>
-      <Profile col={1} colsm={12} colmd={12} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px", paddingTop:"1rem", paddingBottom:"1rem"}}>
+      </desktop>
+      <Profile desktop={1} mobile={12} desktop-md={12} style={{backgrounddesktopor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px", paddingTop:"1rem", paddingBottom:"1rem"}}>
         <h2>Profile</h2>
       </Profile>
     </HeaderRoot>
@@ -177,52 +444,52 @@ class App extends Component {
       <Container>
         <HeaderComponent />
         <Row>
-          <Col col={12}>
+          <desktop>
             <Row>
-              <h1 style={{color: "#253040", paddingTop:"1rem", paddingBottom:"1rem"}}>LEISTUNGSÜBERSICHT</h1>
+              <h1 style={{desktopor: "#253040", paddingTop:"1rem", paddingBottom:"1rem"}}>LEISTUNGSÜBERSICHT</h1>
             </Row>
             <Row>
-              <Col col={12} nogutter>
-                <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0", padding: "1rem"}}>
-                  <Col col={1}><p>Sanitär</p></Col>
-                  <Col col={11}><p>26.04.2013 - 19.10.2017</p></Col>
+              <desktop nogutter>
+                <Row style={{backgrounddesktopor: "#253040", desktopor: "white", borderRadius: "5px 5px 0 0", padding: "1rem"}}>
+                  <desktop desktop={1}><p>Sanitär</p></desktop>
+                  <desktop desktop={11}><p>26.04.2013 - 19.10.2017</p></desktop>
                 </Row>
                 <Row>
-                  <Col col={12} style={{backgroundColor: "#D3D3D3"}}>
+                  <desktop desktop={12} style={{backgrounddesktopor: "#D3D3D3"}}>
                     <Row>
-                      <Col><h1>SERVICECENTER</h1></Col>
+                      <desktop><h1>SERVICECENTER</h1></desktop>
                     </Row>
                     <Row />
                     <Row />
                     <Row>
-                      <Col col={6} colmd={12}>
+                      <desktop desktop={6} tablet={12} mobile={12}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
-                      </Col>
-                      <Col col={6} colmd={12}>
+                      </desktop>
+                      <desktop desktop={6} desktop-md={12}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
-                      </Col>
+                      </desktop>
                     </Row>
                     <Row>
-                      <Col col={6} colmd={12}>
+                      <desktop desktop={6} desktop-md={12}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
-                      </Col>
-                      <Col col={6} colmd={12}>
+                      </desktop>
+                      <desktop desktop={6} desktop-md={12}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
-                      </Col>
+                      </desktop>
                     </Row>
                     <Row>
-                      <Col col={6} colmd={12}>
+                      <desktop desktop={6} desktop-md={12}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
-                      </Col>
-                      <Col col={6}>
+                      </desktop>
+                      <desktop desktop={6}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
-                      </Col>
+                      </desktop>
                     </Row>
-                  </Col>
+                  </desktop>
                 </Row>
-              </Col>
+              </desktop>
             </Row>
-          </Col>
+          </desktop>
         </Row>
       </Container>
     )
