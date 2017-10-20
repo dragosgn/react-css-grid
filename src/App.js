@@ -12,18 +12,17 @@ const Container = styled.div`
   box-sizing: border-box;
 `
 
+let mobileGutter = `1rem`
+let tabletGutter = `1rem`
+let desktopGutter = `1.5rem`
+
 
 const Col = styled.div`
   float:left;
   min-height: 0.5rem;
   width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
-  padding-left: ${props => props.nogutter ? 0 : 24}px;
-  padding-right: ${props => props.nogutter ? 0 : 24}px;
-  :root {
-    mobile-gutter: 1rem;
-    tablet-gutter: 1rem;
-    desktop-gutter: 1.5 rem;
-  }
+  padding-left: ${props => props.nogutter ? 0 : desktopGutter};
+  padding-right: ${props => props.nogutter ? 0 : desktopGutter};
   /* Mobile Responsivness */
 
   /* ----------- iPhone 4 and 4S ----------- */
@@ -33,8 +32,8 @@ const Col = styled.div`
     and (max-device-width: 480px)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -44,8 +43,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
     /* Landscape */
@@ -55,8 +54,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
@@ -67,8 +66,8 @@ const Col = styled.div`
     and (max-device-width: 568px)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -78,8 +77,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -89,8 +88,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -101,8 +100,8 @@ const Col = styled.div`
     and (max-device-width: 667px)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -112,8 +111,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -123,8 +122,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -135,8 +134,8 @@ const Col = styled.div`
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -146,8 +145,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -157,8 +156,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* ----------- iPhone X ----------- */
@@ -169,8 +168,8 @@ const Col = styled.div`
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -180,8 +179,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -191,8 +190,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
   /* ----------- Galaxy S3 ----------- */
 
@@ -213,8 +212,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 2)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -224,8 +223,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 2)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* ----------- Galaxy S4, S5 and Note 3 ----------- */
@@ -236,8 +235,8 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -247,8 +246,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -258,8 +257,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* ----------- Galaxy S6 ----------- */
@@ -270,8 +269,8 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -281,8 +280,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -292,8 +291,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
 
@@ -305,8 +304,8 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -316,8 +315,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -327,8 +326,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* ----------- Google Pixel XL ----------- */
@@ -339,8 +338,8 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -350,8 +349,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -361,8 +360,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* ----------- HTC One ----------- */
@@ -373,8 +372,8 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -384,8 +383,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -395,8 +394,8 @@ const Col = styled.div`
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* ----------- Windows Phone ----------- */
@@ -406,8 +405,8 @@ const Col = styled.div`
     and (device-width: 480px)
     and (device-height: 800px) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Portrait */
@@ -416,8 +415,8 @@ const Col = styled.div`
     and (device-height: 800px)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Landscape */
@@ -426,8 +425,8 @@ const Col = styled.div`
     and (device-height: 800px)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : mobileGutter};
+      padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
   /* Tablets and Ipads */
@@ -733,11 +732,11 @@ const PerformanceComponent = ({title, content}) => {
   return(
     <PerfRoot>
       <PerfHeader>
-        <Col desktop={7} mobile={2}>
+        <Col desktop={7} tablet={6} mobile={3}>
           <HeaderTitle>{title}</HeaderTitle>
         </Col>
-        <Col desktop={5}>
-          <HeaderDate>26.04.2013 - 19.10.2017</HeaderDate>
+        <Col desktop={5} tablet={2} mobile={1}>
+          <HeaderDate>26.04.2013</HeaderDate>
         </Col>
       </PerfHeader>
       <PerfBody>
