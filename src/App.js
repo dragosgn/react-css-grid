@@ -12,12 +12,18 @@ const Container = styled.div`
   box-sizing: border-box;
 `
 
+
 const Col = styled.div`
   float:left;
   min-height: 0.5rem;
   width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
   padding-left: ${props => props.nogutter ? 0 : 24}px;
   padding-right: ${props => props.nogutter ? 0 : 24}px;
+  :root {
+    mobile-gutter: 1rem;
+    tablet-gutter: 1rem;
+    desktop-gutter: 1.5 rem;
+  }
   /* Mobile Responsivness */
 
   /* ----------- iPhone 4 and 4S ----------- */
@@ -821,26 +827,26 @@ class App extends Component {
                       <Col><h1>SERVICECENTER</h1></Col>
                     </Row>
                     <Row>
-                      <Col desktop={6} tablet={4}>
+                      <Col desktop={6} tablet={8}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
                       </Col>
-                      <Col desktop={6} tablet={4}>
+                      <Col desktop={6} tablet={8}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
                       </Col>
                     </Row>
                     <Row>
-                      <Col desktop={6} tablet={4}>
+                      <Col desktop={6} tablet={8}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
                       </Col>
-                      <Col desktop={6} tablet={4}>
+                      <Col desktop={6} tablet={8}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
                       </Col>
                     </Row>
                     <Row>
-                      <Col desktop={6} tablet={4}>
+                      <Col desktop={6} tablet={8}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
                       </Col>
-                      <Col desktop={6} tablet={4}>
+                      <Col desktop={6} tablet={8}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
                       </Col>
                     </Row>
