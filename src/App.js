@@ -18,7 +18,6 @@ const Col = styled.div`
   width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
   padding-left: ${props => props.nogutter ? 0 : 1}rem;
   padding-right: ${props => props.nogutter ? 0 : 1}rem;
-
   /* Mobile Responsivness */
 
   /* ----------- iPhone 4 and 4S ----------- */
@@ -27,7 +26,9 @@ const Col = styled.div`
     and (min-device-width: 320px)
     and (max-device-width: 480px)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Portrait */
@@ -36,6 +37,9 @@ const Col = styled.div`
     and (max-device-width: 480px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
     /* Landscape */
@@ -44,7 +48,9 @@ const Col = styled.div`
     and (max-device-width: 480px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
@@ -54,7 +60,9 @@ const Col = styled.div`
     and (min-device-width: 320px)
     and (max-device-width: 568px)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Portrait */
@@ -63,6 +71,9 @@ const Col = styled.div`
     and (max-device-width: 568px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Landscape */
@@ -71,7 +82,9 @@ const Col = styled.div`
     and (max-device-width: 568px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -81,7 +94,9 @@ const Col = styled.div`
     and (min-device-width: 375px)
     and (max-device-width: 667px)
     and (-webkit-min-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Portrait */
@@ -90,7 +105,9 @@ const Col = styled.div`
     and (max-device-width: 667px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Landscape */
@@ -99,7 +116,9 @@ const Col = styled.div`
     and (max-device-width: 667px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -109,7 +128,9 @@ const Col = styled.div`
     and (min-device-width: 414px)
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Portrait */
@@ -118,7 +139,9 @@ const Col = styled.div`
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Landscape */
@@ -127,7 +150,9 @@ const Col = styled.div`
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* ----------- iPhone X ----------- */
@@ -137,7 +162,9 @@ const Col = styled.div`
     and (min-device-width: 375px)
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Portrait */
@@ -146,7 +173,9 @@ const Col = styled.div`
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Landscape */
@@ -155,7 +184,9 @@ const Col = styled.div`
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
   /* ----------- Galaxy S3 ----------- */
 
@@ -164,7 +195,9 @@ const Col = styled.div`
     and (device-width: 320px)
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 2) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Portrait */
@@ -173,7 +206,9 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 2)
     and (orientation: portrait) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Landscape */
@@ -182,7 +217,9 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 2)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* ----------- Galaxy S4, S5 and Note 3 ----------- */
@@ -192,7 +229,9 @@ const Col = styled.div`
     and (device-width: 320px)
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Portrait */
@@ -201,7 +240,9 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: portrait) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Landscape */
@@ -210,7 +251,9 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: landscape) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* ----------- Galaxy S6 ----------- */
@@ -220,7 +263,9 @@ const Col = styled.div`
     and (device-width: 360px)
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Portrait */
@@ -229,7 +274,9 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: portrait) {
-
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
   /* Landscape */
@@ -238,64 +285,79 @@ const Col = styled.div`
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 4)
     and (orientation: landscape) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
 
   /* ----------- Google Pixel ----------- */
 
-/* Portrait and Landscape */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 3) {
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
 
-}
+  /* Portrait */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
 
-/* Portrait */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 3)
-  and (orientation: portrait) {
+  /* Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
 
-}
+  /* ----------- Google Pixel XL ----------- */
 
-/* Landscape */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 3)
-  and (orientation: landscape) {
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 4) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
 
-}
+  /* Portrait */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 4)
+    and (orientation: portrait) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
 
-/* ----------- Google Pixel XL ----------- */
-
-/* Portrait and Landscape */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 4) {
-
-}
-
-/* Portrait */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 4)
-  and (orientation: portrait) {
-
-}
-
-/* Landscape */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 4)
-  and (orientation: landscape) {
-
-}
+  /* Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 4)
+    and (orientation: landscape) {
+      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      padding: ${props => props.nogutter ? 0 : 0.5}rem;
+      padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
+  }
 
 
   @media all and (max-width:800px){
@@ -303,7 +365,7 @@ const Col = styled.div`
   };
   @media  and (max-width:650px){
     width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
-    padding-left: ${props => props.nogutter ? 0 : 0.5}rem;
+    padding: ${props => props.nogutter ? 0 : 0.5}rem;
     padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
@@ -359,10 +421,10 @@ const PerformanceComponent = ({title, content}) => {
       <PerfHeader>
         <Col desktop={7} mobile={2}>
           <HeaderTitle>{title}</HeaderTitle>
-        </desktop>
+        </Col>
         <Col desktop={5}>
           <HeaderDate>26.04.2013 - 19.10.2017</HeaderDate>
-        </desktop>
+        </Col>
       </PerfHeader>
       <PerfBody>
       </PerfBody>
@@ -398,19 +460,19 @@ const MenuItem = styled(Col)`
   color: white;
   padding-bottom: 0px;
   @media all and (max-width:650px){
-    desktopor: grey;
+    color: grey;
     background-color: white;
   }
 
 `
 
-const Logo = styled(desktop)`
+const Logo = styled(Col)`
   @media all and (max-width:650px){
     display: none;
   }
 `
 
-const Profile = styled(desktop)`
+const Profile = styled(Col)`
   @media all and (max-width:650px){
     display: none;
   }
@@ -428,7 +490,7 @@ const HeaderComponent = () => {
           <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
         </HeaderMenu>
       </Col>
-      <Profile desktop={1} mobile={12} desktop-md={12} style={{backgrounddesktopor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px", paddingTop:"1rem", paddingBottom:"1rem"}}>
+      <Profile desktop={1} mobile={12} desktop-md={12} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px", minWidth: "200px", paddingTop:"1rem", paddingBottom:"1rem"}}>
         <h2>Profile</h2>
       </Profile>
     </HeaderRoot>
@@ -443,21 +505,19 @@ class App extends Component {
         <Row>
           <Col>
             <Row>
-              <h1 style={{desktopor: "#253040", paddingTop:"1rem", paddingBottom:"1rem"}}>LEISTUNGSÜBERSICHT</h1>
+              <h1 style={{color: "#253040", paddingTop:"1rem", paddingBottom:"1rem"}}>LEISTUNGSÜBERSICHT</h1>
             </Row>
             <Row>
               <Col nogutter>
-                <Row style={{backgrounddesktopor: "#253040", desktopor: "white", borderRadius: "5px 5px 0 0", padding: "1rem"}}>
+                <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0", padding: "1rem"}}>
                   <Col desktop={1}><p>Sanitär</p></Col>
                   <Col desktop={11}><p>26.04.2013 - 19.10.2017</p></Col>
                 </Row>
                 <Row>
-                  <Col desktop={12} style={{backgrounddesktopor: "#D3D3D3"}}>
+                  <Col desktop={12} style={{backgroundColor: "#D3D3D3"}}>
                     <Row>
                       <Col><h1>SERVICECENTER</h1></Col>
                     </Row>
-                    <Row />
-                    <Row />
                     <Row>
                       <Col desktop={6} tablet={12} mobile={12}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
