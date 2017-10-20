@@ -26,7 +26,7 @@ const Col = styled.div`
     and (min-device-width: 320px)
     and (max-device-width: 480px)
     and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -37,7 +37,7 @@ const Col = styled.div`
     and (max-device-width: 480px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -48,7 +48,7 @@ const Col = styled.div`
     and (max-device-width: 480px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -60,7 +60,7 @@ const Col = styled.div`
     and (min-device-width: 320px)
     and (max-device-width: 568px)
     and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -71,7 +71,7 @@ const Col = styled.div`
     and (max-device-width: 568px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -82,7 +82,7 @@ const Col = styled.div`
     and (max-device-width: 568px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -94,7 +94,7 @@ const Col = styled.div`
     and (min-device-width: 375px)
     and (max-device-width: 667px)
     and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -105,7 +105,7 @@ const Col = styled.div`
     and (max-device-width: 667px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -116,7 +116,7 @@ const Col = styled.div`
     and (max-device-width: 667px)
     and (-webkit-min-device-pixel-ratio: 2)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -128,7 +128,7 @@ const Col = styled.div`
     and (min-device-width: 414px)
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -139,7 +139,7 @@ const Col = styled.div`
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -150,7 +150,7 @@ const Col = styled.div`
     and (max-device-width: 736px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -162,7 +162,7 @@ const Col = styled.div`
     and (min-device-width: 375px)
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -173,7 +173,7 @@ const Col = styled.div`
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: portrait) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -184,7 +184,7 @@ const Col = styled.div`
     and (max-device-width: 812px)
     and (-webkit-min-device-pixel-ratio: 3)
     and (orientation: landscape) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -195,7 +195,7 @@ const Col = styled.div`
     and (device-width: 320px)
     and (device-height: 640px)
     and (-webkit-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
+      width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
       padding: ${props => props.nogutter ? 0 : 0.5}rem;
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
@@ -424,10 +424,9 @@ const Col = styled.div`
       padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
 
-
   /* Tablets and Ipads */
-  /* ----------- iPad 1, 2, Mini and Air ----------- */
 
+  /* ----------- iPad 1, 2, Mini and Air ----------- */
   /* Portrait and Landscape */
   @media only screen
     and (min-device-width: 768px)
@@ -546,14 +545,163 @@ const Col = styled.div`
 
   }
 
+  /* ----------- Galaxy Tab 2 ----------- */
+
+  /* Portrait and Landscape */
+  @media
+    (min-device-width: 800px)
+    and (max-device-width: 1280px) {
+
+  }
+
+  /* Portrait */
+  @media
+    (max-device-width: 800px)
+    and (orientation: portrait) {
+
+  }
+
+  /* Landscape */
+  @media
+    (max-device-width: 1280px)
+    and (orientation: landscape) {
+
+  }
+
+  /* ----------- Galaxy Tab S ----------- */
+
+  /* Portrait and Landscape */
+  @media
+    (min-device-width: 800px)
+    and (max-device-width: 1280px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Portrait */
+  @media
+    (max-device-width: 800px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* Landscape */
+  @media
+    (max-device-width: 1280px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+
+  /* ----------- Nexus 7 ----------- */
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 601px)
+    and (device-height: 906px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332) {
+
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 601px)
+    and (device-height: 906px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: portrait) {
+
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 601px)
+    and (device-height: 906px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: landscape) {
+
+  }
+
+  /* ----------- Nexus 9 ----------- */
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 1536px)
+    and (device-height: 2048px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332) {
+
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 1536px)
+    and (device-height: 2048px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: portrait) {
+
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 1536px)
+    and (device-height: 2048px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: landscape) {
+
+  }
+
+  /* Laptops */
+  /* ----------- Non-Retina Screens ----------- */
+  @media screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+  }
+
+  /* ----------- Retina Screens ----------- */
+  @media screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi) {
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   @media all and (max-width:800px){
-    width: calc(100% * (${props => props.tablet ? props.tablet : 12} / 12));
+    width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
   };
   @media  and (max-width:650px){
     width: calc(100% * (${props => props.mobile ? props.mobile : 12} / 12));
     padding: ${props => props.nogutter ? 0 : 0.5}rem;
     padding-right: ${props => props.nogutter ? 0 : 0.5}rem;
   }
+
+
+
 
 `
 
