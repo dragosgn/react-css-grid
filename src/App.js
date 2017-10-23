@@ -5,11 +5,13 @@ import styled from 'styled-components'
 //  Grid
 
 const Container = styled.div`
-  max-width: 1140px;
   width: 100%;
-  margin-right: auto;
+  max-width: 1200px;
   margin-left: auto;
-  box-sizing: border-box;
+  margin-right: auto;
+  *{
+    box-sizing: border-box;
+  }
 `
 
 let mobileGutter = `1rem`
@@ -438,6 +440,8 @@ const Col = styled.div`
     and (max-device-width: 1024px)
     and (-webkit-min-device-pixel-ratio: 1) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Portrait */
@@ -447,6 +451,8 @@ const Col = styled.div`
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 1) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Landscape */
@@ -456,6 +462,8 @@ const Col = styled.div`
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 1) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
@@ -466,6 +474,8 @@ const Col = styled.div`
     and (max-device-width: 1024px)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Portrait */
@@ -475,6 +485,8 @@ const Col = styled.div`
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Landscape */
@@ -484,6 +496,8 @@ const Col = styled.div`
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* ----------- iPad Pro 10.5" ----------- */
@@ -494,6 +508,8 @@ const Col = styled.div`
     and (max-device-width: 1112px)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Portrait */
@@ -505,6 +521,8 @@ const Col = styled.div`
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Landscape */
@@ -516,6 +534,8 @@ const Col = styled.div`
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* ----------- iPad Pro 12.9" ----------- */
@@ -526,6 +546,8 @@ const Col = styled.div`
     and (max-device-width: 1366px)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Portrait */
@@ -537,6 +559,8 @@ const Col = styled.div`
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Landscape */
@@ -548,6 +572,8 @@ const Col = styled.div`
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* ----------- Galaxy Tab 2 ----------- */
@@ -557,6 +583,8 @@ const Col = styled.div`
     (min-device-width: 800px)
     and (max-device-width: 1280px) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Portrait */
@@ -564,6 +592,8 @@ const Col = styled.div`
     (max-device-width: 800px)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Landscape */
@@ -571,6 +601,8 @@ const Col = styled.div`
     (max-device-width: 1280px)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* ----------- Galaxy Tab S ----------- */
@@ -581,6 +613,8 @@ const Col = styled.div`
     and (max-device-width: 1280px)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Portrait */
@@ -589,6 +623,8 @@ const Col = styled.div`
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Landscape */
@@ -597,6 +633,8 @@ const Col = styled.div`
     and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 2) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* ----------- Nexus 7 ----------- */
@@ -608,6 +646,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 1.331)
     and (-webkit-max-device-pixel-ratio: 1.332) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Portrait */
@@ -618,6 +658,8 @@ const Col = styled.div`
     and (-webkit-max-device-pixel-ratio: 1.332)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Landscape */
@@ -628,6 +670,8 @@ const Col = styled.div`
     and (-webkit-max-device-pixel-ratio: 1.332)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* ----------- Nexus 9 ----------- */
@@ -639,6 +683,8 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 1.331)
     and (-webkit-max-device-pixel-ratio: 1.332) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Portrait */
@@ -649,6 +695,8 @@ const Col = styled.div`
     and (-webkit-max-device-pixel-ratio: 1.332)
     and (orientation: portrait) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Landscape */
@@ -659,6 +707,8 @@ const Col = styled.div`
     and (-webkit-max-device-pixel-ratio: 1.332)
     and (orientation: landscape) {
       width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
   }
 
   /* Laptops */
@@ -668,8 +718,8 @@ const Col = styled.div`
     and (max-device-width: 1600px)
     and (-webkit-min-device-pixel-ratio: 1) {
       width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : desktopGutter};
+      padding-right: ${props => props.nogutter ? 0 : desktopGutter};
   }
 
   /* ----------- Retina Screens ----------- */
@@ -679,20 +729,24 @@ const Col = styled.div`
     and (-webkit-min-device-pixel-ratio: 2)
     and (min-resolution: 192dpi) {
       width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
-      padding-left: ${props => props.nogutter ? 0 : 1}rem;
-      padding-right: ${props => props.nogutter ? 0 : 1}rem;
+      padding-left: ${props => props.nogutter ? 0 : desktopGutter};
+      padding-right: ${props => props.nogutter ? 0 : desktopGutter};
   }
 `
 
 const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  min-height: 0.5rem;
+  min-height: 0.1rem;
   @media all and (max-width:800px){
     flex-wrap: wrap;
-  }
+  };
   @media all and (max-width:650px){
     flex-wrap: wrap;
+  };
+  :before,
+  :after {
+    content:"";
+    display: table ;
+    clear:both;
   }
 `
 
@@ -785,38 +839,35 @@ const Logo = styled(Col)`
 const Profile = styled(Col)`
 `
 
-const HeaderComponent = () => {
-  return (
-    <HeaderRoot>
-      <Logo desktop={1} style={{color: "white"}}><strong><h2>Logo</h2></strong></Logo>
-      <Col desktop={9} nogutter>
-        <HeaderMenu>
-          <MenuItem desktop={3}><p>LEISTUNGSÜBERSICHT</p></MenuItem>
-          <MenuItem desktop={3}><p>WERBEKAMPAGNEN</p></MenuItem>
-          <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
-          <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
-        </HeaderMenu>
-      </Col>
-      <Profile desktop={2} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px",paddingTop:"1rem", paddingBottom:"1rem"}}>
-        <h2>Profile</h2>
-      </Profile>
-    </HeaderRoot>
-  )
-}
+// const HeaderComponent = () => {
+//   return (
+//     <HeaderRoot>
+//       <Logo desktop={1} style={{color: "white"}}><strong><h2>Logo</h2></strong></Logo>
+//       <Col desktop={9} nogutter>
+//         <HeaderMenu>
+//           <MenuItem desktop={3}><p>LEISTUNGSÜBERSICHT</p></MenuItem>
+//           <MenuItem desktop={3}><p>WERBEKAMPAGNEN</p></MenuItem>
+//           <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
+//           <MenuItem desktop={3}><p>BADRECHNER</p></MenuItem>
+//         </HeaderMenu>
+//       </Col>
+//       <Profile desktop={2} style={{backgroundColor: "white", borderRadius: "5px 5px 5px 5px",paddingTop:"1rem", paddingBottom:"1rem"}}>
+//         <h2>Profile</h2>
+//       </Profile>
+//     </HeaderRoot>
+//   )
+// }
 
 class App extends Component {
   render() {
     return (
       <Container>
-        <HeaderComponent />
         <Row>
           <Col>
+              <h1 style={{color: "#253040"}}>LEISTUNGSÜBERSICHT</h1>
             <Row>
-              <h1 style={{color: "#253040", paddingTop:"1rem", paddingBottom:"1rem"}}>LEISTUNGSÜBERSICHT</h1>
-            </Row>
-            <Row>
-              <Col nogutter>
-                <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0", padding: "1rem"}}>
+              <Col>
+                <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0",}}>
                   <Col desktop={1} tablet={1}><p>Sanitär</p></Col>
                   <Col desktop={11} tablet={7}><p>26.04.2013 - 19.10.2017</p></Col>
                 </Row>
