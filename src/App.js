@@ -25,8 +25,7 @@ const Col = styled.div`
   width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
   padding-left: ${props => props.nogutter ? 0 : desktopGutter};
   padding-right: ${props => props.nogutter ? 0 : desktopGutter};
-  margin-left: ${props => props.offset ? props.offset : 0 };
-
+  margin-left: calc(100% * (${props => props.offset ? props.offset : 0}) / 12);
   /* Laptops */
   /* ----------- Non-Retina Screens ----------- */
   @media screen
