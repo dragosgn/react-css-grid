@@ -10,9 +10,6 @@ parserOptions:
 plugins:
   - react
 rules:
-  indent:
-    - error
-    - tab
   semi:
     - error
     - never

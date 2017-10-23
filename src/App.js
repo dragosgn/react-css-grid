@@ -14,7 +14,7 @@ const Container = styled.div`
   }
 `
 
-let mobileGutter = `1rem`
+let mobileGutter = `0.5rem`
 let tabletGutter = `1rem`
 let desktopGutter = `1.5rem`
 
@@ -787,13 +787,14 @@ const PerformanceComponent = ({title, content}) => {
     <PerfRoot>
       <PerfHeader>
         <Col desktop={7} tablet={6} mobile={3}>
-          <HeaderTitle>{title}</HeaderTitle>
+          <HeaderTitle><p></p></HeaderTitle>
         </Col>
         <Col desktop={5} tablet={2} mobile={1}>
-          <HeaderDate>26.04.2013</HeaderDate>
+          <HeaderDate><p></p></HeaderDate>
         </Col>
       </PerfHeader>
       <PerfBody>
+          {content}
       </PerfBody>
       <PerfFooter>
         <Col>
@@ -864,18 +865,14 @@ class App extends Component {
       <Container>
         <Row>
           <Col>
-              <h1 style={{color: "#253040"}}>LEISTUNGSÜBERSICHT</h1>
             <Row>
               <Col>
                 <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0",}}>
                   <Col desktop={1} tablet={1}><p>Sanitär</p></Col>
-                  <Col desktop={11} tablet={7}><p>26.04.2013 - 19.10.2017</p></Col>
+                  <Col desktop={11} tablet={7}><p></p></Col>
                 </Row>
                 <Row>
                   <Col desktop={12} style={{backgroundColor: "#D3D3D3"}}>
-                    <Row>
-                      <Col><h1>SERVICECENTER</h1></Col>
-                    </Row>
                     <Row>
                       <Col desktop={6} tablet={8}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
