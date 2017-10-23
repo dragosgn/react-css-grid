@@ -25,7 +25,6 @@ const Col = styled.div`
   width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
   padding-left: ${props => props.nogutter ? 0 : desktopGutter};
   padding-right: ${props => props.nogutter ? 0 : desktopGutter};
-  margin-left: calc(100% * (${props => props.offset ? props.offset : 0}) / 12);
   /* Laptops */
   /* ----------- Non-Retina Screens ----------- */
   @media screen
@@ -870,8 +869,8 @@ class App extends Component {
             <Row>
               <Col>
                 <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0",}}>
-                  <Col desktop={1} tablet={1}><p>Sanitär</p></Col>
-                  <Col desktop={3} tablet={2} offset={8}><p>Date</p></Col>
+                  <Col desktop={1} tablet={1} mobile={4}><p>Sanitär</p></Col>
+                  <Col desktop={3} tablet={2} mobile={4}><p>Date</p></Col>
                 </Row>
                 <Row>
                   <Col desktop={12} style={{backgroundColor: "#D3D3D3"}}>
