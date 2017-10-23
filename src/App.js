@@ -9,14 +9,14 @@ const Container = styled.div`
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  *{
+  * {
     box-sizing: border-box;
   }
 `
 
 let mobileGutter = `0.5rem`
 let tabletGutter = `1rem`
-let desktopGutter = `1.5rem`
+let desktopGutter = `1rem`
 
 
 const Col = styled.div`
@@ -25,8 +25,313 @@ const Col = styled.div`
   width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
   padding-left: ${props => props.nogutter ? 0 : desktopGutter};
   padding-right: ${props => props.nogutter ? 0 : desktopGutter};
-  /* Mobile Responsivness */
+  margin-left: ${props => props.offset ? props.offset : 0 };
 
+  /* Laptops */
+  /* ----------- Non-Retina Screens ----------- */
+  @media screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+      width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
+      padding-left: ${props => props.nogutter ? 0 : desktopGutter};
+      padding-right: ${props => props.nogutter ? 0 : desktopGutter};
+  }
+
+  /* ----------- Retina Screens ----------- */
+  @media screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-resolution: 192dpi) {
+      width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
+      padding-left: ${props => props.nogutter ? 0 : desktopGutter};
+      padding-right: ${props => props.nogutter ? 0 : desktopGutter};
+  }
+
+
+  /* Tablets and Ipads */
+
+  /* ----------- iPad 1, 2, Mini and Air ----------- */
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 1) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* ----------- iPad Pro 10.5" ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 834px)
+    and (max-device-width: 1112px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Portrait */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen
+    and (min-device-width: 834px)
+    and (max-device-width: 834px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Landscape */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen
+    and (min-device-width: 1112px)
+    and (max-device-width: 1112px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* ----------- iPad Pro 12.9" ----------- */
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1366px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Portrait */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen
+    and (min-device-width: 1024px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Landscape */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen
+    and (min-device-width: 1366px)
+    and (max-device-width: 1366px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* ----------- Galaxy Tab 2 ----------- */
+
+  /* Portrait and Landscape */
+  @media
+    (min-device-width: 800px)
+    and (max-device-width: 1280px) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Portrait */
+  @media
+    (max-device-width: 800px)
+    and (orientation: portrait) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Landscape */
+  @media
+    (max-device-width: 1280px)
+    and (orientation: landscape) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* ----------- Galaxy Tab S ----------- */
+
+  /* Portrait and Landscape */
+  @media
+    (min-device-width: 800px)
+    and (max-device-width: 1280px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Portrait */
+  @media
+    (max-device-width: 800px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Landscape */
+  @media
+    (max-device-width: 1280px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* ----------- Nexus 7 ----------- */
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 601px)
+    and (device-height: 906px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 601px)
+    and (device-height: 906px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: portrait) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 601px)
+    and (device-height: 906px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: landscape) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* ----------- Nexus 9 ----------- */
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 1536px)
+    and (device-height: 2048px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 1536px)
+    and (device-height: 2048px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: portrait) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 1536px)
+    and (device-height: 2048px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: landscape) {
+      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
+      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
+      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
+  }
+
+
+  /* Mobile Responsivness */
   /* ----------- iPhone 4 and 4S ----------- */
   /* Portrait and Landscape */
   @media only screen
@@ -431,317 +736,10 @@ const Col = styled.div`
       padding-right: ${props => props.nogutter ? 0 : mobileGutter};
   }
 
-  /* Tablets and Ipads */
-
-  /* ----------- iPad 1, 2, Mini and Air ----------- */
-  /* Portrait and Landscape */
-  @media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (-webkit-min-device-pixel-ratio: 1) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Portrait */
-  @media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (orientation: portrait)
-    and (-webkit-min-device-pixel-ratio: 1) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Landscape */
-  @media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 1) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-
-  /* Portrait and Landscape */
-  @media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Portrait */
-  @media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (orientation: portrait)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Landscape */
-  @media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* ----------- iPad Pro 10.5" ----------- */
-
-  /* Portrait and Landscape */
-  @media only screen
-    and (min-device-width: 834px)
-    and (max-device-width: 1112px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Portrait */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  @media only screen
-    and (min-device-width: 834px)
-    and (max-device-width: 834px)
-    and (orientation: portrait)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  @media only screen
-    and (min-device-width: 1112px)
-    and (max-device-width: 1112px)
-    and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* ----------- iPad Pro 12.9" ----------- */
-
-  /* Portrait and Landscape */
-  @media only screen
-    and (min-device-width: 1024px)
-    and (max-device-width: 1366px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Portrait */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  @media only screen
-    and (min-device-width: 1024px)
-    and (max-device-width: 1024px)
-    and (orientation: portrait)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  @media only screen
-    and (min-device-width: 1366px)
-    and (max-device-width: 1366px)
-    and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* ----------- Galaxy Tab 2 ----------- */
-
-  /* Portrait and Landscape */
-  @media
-    (min-device-width: 800px)
-    and (max-device-width: 1280px) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Portrait */
-  @media
-    (max-device-width: 800px)
-    and (orientation: portrait) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Landscape */
-  @media
-    (max-device-width: 1280px)
-    and (orientation: landscape) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* ----------- Galaxy Tab S ----------- */
-
-  /* Portrait and Landscape */
-  @media
-    (min-device-width: 800px)
-    and (max-device-width: 1280px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Portrait */
-  @media
-    (max-device-width: 800px)
-    and (orientation: portrait)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Landscape */
-  @media
-    (max-device-width: 1280px)
-    and (orientation: landscape)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* ----------- Nexus 7 ----------- */
-
-  /* Portrait and Landscape */
-  @media screen
-    and (device-width: 601px)
-    and (device-height: 906px)
-    and (-webkit-min-device-pixel-ratio: 1.331)
-    and (-webkit-max-device-pixel-ratio: 1.332) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Portrait */
-  @media screen
-    and (device-width: 601px)
-    and (device-height: 906px)
-    and (-webkit-min-device-pixel-ratio: 1.331)
-    and (-webkit-max-device-pixel-ratio: 1.332)
-    and (orientation: portrait) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Landscape */
-  @media screen
-    and (device-width: 601px)
-    and (device-height: 906px)
-    and (-webkit-min-device-pixel-ratio: 1.331)
-    and (-webkit-max-device-pixel-ratio: 1.332)
-    and (orientation: landscape) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* ----------- Nexus 9 ----------- */
-
-  /* Portrait and Landscape */
-  @media screen
-    and (device-width: 1536px)
-    and (device-height: 2048px)
-    and (-webkit-min-device-pixel-ratio: 1.331)
-    and (-webkit-max-device-pixel-ratio: 1.332) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Portrait */
-  @media screen
-    and (device-width: 1536px)
-    and (device-height: 2048px)
-    and (-webkit-min-device-pixel-ratio: 1.331)
-    and (-webkit-max-device-pixel-ratio: 1.332)
-    and (orientation: portrait) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Landscape */
-  @media screen
-    and (device-width: 1536px)
-    and (device-height: 2048px)
-    and (-webkit-min-device-pixel-ratio: 1.331)
-    and (-webkit-max-device-pixel-ratio: 1.332)
-    and (orientation: landscape) {
-      width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-      padding-left: ${props => props.nogutter ? 0 : tabletGutter};
-      padding-right: ${props => props.nogutter ? 0 : tabletGutter};
-  }
-
-  /* Laptops */
-  /* ----------- Non-Retina Screens ----------- */
-  @media screen
-    and (min-device-width: 1200px)
-    and (max-device-width: 1600px)
-    and (-webkit-min-device-pixel-ratio: 1) {
-      width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
-      padding-left: ${props => props.nogutter ? 0 : desktopGutter};
-      padding-right: ${props => props.nogutter ? 0 : desktopGutter};
-  }
-
-  /* ----------- Retina Screens ----------- */
-  @media screen
-    and (min-device-width: 1200px)
-    and (max-device-width: 1600px)
-    and (-webkit-min-device-pixel-ratio: 2)
-    and (min-resolution: 192dpi) {
-      width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
-      padding-left: ${props => props.nogutter ? 0 : desktopGutter};
-      padding-right: ${props => props.nogutter ? 0 : desktopGutter};
-  }
 `
 
 const Row = styled.div`
   min-height: 0.1rem;
-  @media all and (max-width:800px){
-    flex-wrap: wrap;
-  };
-  @media all and (max-width:650px){
-    flex-wrap: wrap;
-  };
   :before,
   :after {
     content:"";
@@ -867,33 +865,38 @@ class App extends Component {
           <Col>
             <Row>
               <Col>
+                <h3></h3>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
                 <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0",}}>
                   <Col desktop={1} tablet={1}><p>Sanitär</p></Col>
-                  <Col desktop={11} tablet={7}><p></p></Col>
+                  <Col desktop={3} tablet={2} offset={8}><p>Date</p></Col>
                 </Row>
                 <Row>
                   <Col desktop={12} style={{backgroundColor: "#D3D3D3"}}>
                     <Row>
-                      <Col desktop={6} tablet={8}>
+                      <Col desktop={6} tablet={4}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
                       </Col>
-                      <Col desktop={6} tablet={8}>
+                      <Col desktop={6} tablet={4}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
                       </Col>
                     </Row>
                     <Row>
-                      <Col desktop={6} tablet={8}>
+                      <Col desktop={6} tablet={4}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
                       </Col>
-                      <Col desktop={6} tablet={8}>
+                      <Col desktop={6} tablet={4}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
                       </Col>
                     </Row>
                     <Row>
-                      <Col desktop={6} tablet={8}>
+                      <Col desktop={6} tablet={4}>
                         <PerformanceComponent title={"Ihr Servicestatus"} content={"Clock"} />
                       </Col>
-                      <Col desktop={6} tablet={8}>
+                      <Col desktop={6} tablet={4}>
                         <PerformanceComponent title ={"Neueste unbearbeitete Anfragen"} content={"Table"} />
                       </Col>
                     </Row>
