@@ -26,9 +26,6 @@ const Content = styled.div`
   width: 3em;
   background: papayawhip;
 
-  ${media.desktop`background: dodgerblue`}
-  ${media.tablet`background: dodgerblue`}
-  ${media.phone`background: dodgerblue`}
 
 `
 
