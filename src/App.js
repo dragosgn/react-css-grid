@@ -745,8 +745,9 @@ const Row = styled.div`
     clear:both;
   }
 `
+// End of the Grid
 
-// Grid
+
 const PerfHeader = styled(Row)`
   background-color: #253040;
   color: white;
@@ -855,6 +856,12 @@ const Profile = styled(Col)`
 //   )
 // }
 
+
+const DateLabel = styled(Col)`
+  display: flex;
+  justify-content: flex-end;
+`
+
 class App extends Component {
   render() {
     return (
@@ -870,7 +877,7 @@ class App extends Component {
               <Col>
                 <Row style={{backgroundColor: "#253040", color: "white", borderRadius: "5px 5px 0 0",}}>
                   <Col desktop={1} tablet={1} mobile={4}><p>Sanitär</p></Col>
-                  <Col desktop={3} tablet={2} mobile={4}><p>Date</p></Col>
+                  <DateLabel desktop={11} tablet={2} mobile={4}><p>Date</p></DateLabel>
                 </Row>
                 <Row>
                   <Col desktop={12} style={{backgroundColor: "#D3D3D3"}}>
@@ -909,4 +916,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
