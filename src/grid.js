@@ -1,3 +1,4 @@
+import React from 'react'
 import styled, {css}  from 'styled-components'
 
 //  Grid
@@ -6,85 +7,54 @@ const tabletGutter = "1rem"
 const desktopGutter = "1rem"
 
 export const baseContainer = css`
-  width: 100%;
   max-width: 1200px;
-  padding: ${desktopGutter};
-  @media (max-device-width: 1200px) {
-    padding: ${desktopGutter};
-  };
-  @media (max-device-width: 900px) {
-    padding: ${tabletGutter};
-  };
-  @media (max-device-width: 600px) {
-    padding: ${mobileGutter};
-  };
+  width:100%;
   margin-left: auto;
   margin-right: auto;
+  * {
+    box-sizing: border-box;
+  }
 `
 
 export const Container = styled.div`
-  ${baseContainer}
+  ${baseContainer};
 `
 
 export const baseColumn = css`
   float: left;
   min-height: 0.1rem;
   width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
-  padding-left: ${props => props.nogutter ? 0 : desktopGutter};
-  padding-right: ${props => props.nogutter ? 0 : desktopGutter};
-  padding-top: -${desktopGutter};
-  padding-bottom: -${desktopGutter};
+  padding: ${desktopGutter};
   @media (max-device-width: 1200px) {
     width: calc(100% * (${props => props.desktop ? props.desktop : 12} / 12));
-    padding-left: ${desktopGutter};
-    padding-right: ${desktopGutter};
-    padding-top: -${desktopGutter};
-    padding-bottom: -${desktopGutter};
+    padding: ${desktopGutter};
   };
   @media (max-device-width: 900px) {
     width: calc(100% * (${props => props.tablet ? props.tablet : 8} / 8));
-    padding-left: ${tabletGutter};
-    padding-right: ${tabletGutter};
-    padding-top: -${tabletGutter};
-    padding-bottom: -${tabletGutter};
-  };
+    padding: ${tabletGutter};
+  }
   @media (max-device-width: 600px) {
     width: calc(100% * (${props => props.mobile ? props.mobile : 4} / 4));
-    padding-left: ${mobileGutter};
-    padding-right: ${mobileGutter};
-    padding-top: -${mobileGutter};
-    padding-bottom: -${mobileGutter};
+    padding: ${mobileGutter};
   };
 `
 
 export const Col = styled.div`
-  ${baseColumn}
-`
+  ${baseColumn};
+  border: 1px solid red;
+  `
+
 
 export const baseRow = css`
   min-height: 0.1rem;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -${desktopGutter};
-  margin-left: -${desktopGutter};
-  @media (max-device-width: 1140px) {
-    margin-right: -${desktopGutter};
-    margin-left: -${desktopGutter};
-  };
-  @media (max-device-width: 900px) {
-    margin-right: -${tabletGutter};
-    margin-left: -${tabletGutter};
-  };
-  @media (max-device-width: 600px) {
-    margin-right: -${mobileGutter};
-    margin-left: -${mobileGutter};
-  };
   `
 export const Row = styled.div`
   ${baseRow};
+  border: 1px solid green;
 `
 // ------- End of the Grid -------
-
 
 // ------- Template media queries -------
 
