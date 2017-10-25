@@ -15,7 +15,6 @@ export const baseContainer = css`
     box-sizing: border-box;
   }
 `
-
 export const Container = styled.div`
   ${baseContainer};
 `
