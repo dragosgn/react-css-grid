@@ -2,6 +2,29 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import {Col, Row, Container} from './grid'
 
+
+const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+`
+
+const Th = styled.th`
+  background: #333;
+  color: white;
+  font-weight: bold;
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+`
+
+const Td = styled.td`
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+`
+
+
+
 class App extends Component {
   render() {
     return (
@@ -83,6 +106,31 @@ class App extends Component {
         </Row>
         <Row>
           Row
+        </Row>
+        <Row>
+          <Column>
+            <table>
+              <thead>
+                <tr>
+                  <Th>First Name</Th>
+                  <Th>Last Name</Th>
+                  <Th>Job Title</Th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <Td>James</Td>
+                  <Td>Matman</Td>
+                  <Td>Chief Decoration officer</Td>
+                </tr>
+                <tr>
+                  <Td>The</Td>
+                  <Td>Tick</Td>
+                  <Td>Crimefighter Sorta</Td>
+                </tr>
+              </tbody>
+            </table>
+          </Column>
         </Row>
       </Container>
     )
